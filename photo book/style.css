@@ -1,0 +1,195 @@
+body {
+    background-color: aliceblue;
+}
+
+
+#warapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#logo img {
+    width: 20%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#index {
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+#index>div {
+    margin: 0 200px;
+    padding: 20px 0;
+}
+
+.index-ol {
+    text-align: left;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.index-ol>li {
+    margin-bottom: 20px;
+}
+
+#detail>div {
+    margin: 0 200px;
+
+
+}
+
+
+.detail-parent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-child-left {
+    width: 50%;
+    margin-right: 40px;
+    text-align: left;
+}
+
+.detail-child-left>img {
+    width: 100%;
+}
+
+.detail-child-right {
+    width: 50%;
+    text-align: left;
+}
+
+.detail-child-right>table {
+    border-top: solid 1px blue;
+    border-bottom: solid 1px blue;
+    font-size: 15px;
+}
+
+.detail-child-right>tr {
+    text-align: left;
+}
+
+.detail-child-right th {
+    padding-right: 15px;
+    font-weight: normal;
+}
+.detail-child-right td{
+    padding-right: 20px;
+}
+
+
+.detail-child-right>p {
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.detail-child-right>a {
+    color: black;
+    font-size: 15px;
+}
+
+
+h2 {
+    text-align: left;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 28px;
+}
+
+footer {
+    text-align: left;
+    margin: 80px 200px 60px 200px;
+    font-size: 13px;
+}
+
+@media screen and (max-width:1024px) {
+
+
+    #warapper {
+        width: 100%;
+
+    }
+
+    #logo>img {
+        width: 55%;
+        margin-left: 10px;
+    }
+
+    #main-photo img {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+    }
+
+    #index {
+        width: 100%;
+    }
+
+    #index>div {
+        margin-left: 25px;
+        margin-right: 10px;
+    }
+
+
+    #detail>div {
+        margin-left: 25px;
+        margin-right: 0;
+        width: 100%;
+
+    }
+
+    .detail-parent {
+        display: block;
+    }
+
+    .detail-child-left {
+        width: 100%;
+    }
+
+    .detail-child-left>img {
+        width: 80%;
+        height: 80%;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .detail-child-right>table {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+    }
+
+    .detail-child-right {
+        width: 100%;
+        text-align: left;
+
+    }
+
+    .detail-child-right td {
+        padding-right: 35px;
+    }
+
+    .detail-child-right>p {
+        width: 19em;
+    
+    }
+
+
+    footer {
+        width: 100%;
+
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: left;
+    }
+
+
+
+}
