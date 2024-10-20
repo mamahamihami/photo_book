@@ -1,6 +1,5 @@
 body {
   max-width: 100%;
-  height: auto;
   margin: 0 auto;
   font-family: "Noto Serif JP", serif;
   font-optical-sizing: auto;
@@ -141,7 +140,6 @@ article {
 #create {
   position: relative;
   width: 100%;
-  height: 600px;
   margin: 0 auto;
   margin-bottom: 50px;
   writing-mode: vertical-rl;
@@ -185,7 +183,6 @@ article {
 #science {
   position: relative;
   width: 100%;
-  height: 600px;
   margin: 0 auto;
   margin-bottom: 100px;
   writing-mode: vertical-lr;
@@ -218,7 +215,7 @@ article {
   writing-mode: horizontal-tb;
   z-index: 2;
   background-color: rgba(128, 0, 0, 0.5);
-  bottom: 0%;
+  bottom: -6%;
   right: 30%;
   padding: 50px 100px;
   font-size: 16px;
@@ -275,7 +272,7 @@ article {
   position: absolute;
   writing-mode: horizontal-tb;
   bottom: 2%;
-  left: 70%;
+  left: 50%;
   color: white;
   font-size: 10px;
 }
@@ -341,7 +338,7 @@ article {
   #news {
     margin-bottom: 30px;
     width: 100%;
-    height: 75%;
+    height: 55%;
     margin-bottom: 30px;
   }
 
@@ -372,27 +369,79 @@ article {
     padding-left: 13px;
     border-left: solid 1px black;
   }
-
-  #create{
-    width: 100%;
-  }
+  
+ #create{
+  max-width: 100%;
+ }
 
   #create h2 {
     margin: 0 20px 0 10px;
+    padding-bottom: 30px;
   }
 
-  #create img {
-    position: relative;
+  #create span{
+    display: none;
+  }
+
+  #create img{
     width: 75%;
-    margin: 0 auto;
-    top: 15%;
+    object-fit: scale-down;
+    bottom: 20px;
+    text-align: center;
   }
 
-  .create-child {
-    position: relative;
-    top: 50%;
+  .create-child{
+    padding: 20px 40px;
+    bottom: 0%;
+    left: 10%;
+    transform: translate(-30px, 0);
+  
   }
 
+  #science{
+    margin-top: 200px;
+    max-width: 100%;
+  }
+  
+    #science h2 {
+      margin: 0 20px 0 10px;
+      padding-bottom: 30px;
+    }
+  
+    #science span{
+      display: none;
+    }
+  
+    #science img{
+      width: 75%;
+      object-fit: scale-down;
+      bottom: 20px;
+      text-align: center;
+    }
+  
+    .science-child{
+      padding: 20px 40px;
+      bottom: -15%;
+      right: 10%;
+      transform: translate(30px, -10px);
+    
+    }
 
+  .footer-right img{
+      width: 10%;
+      margin-left: 40px;
+  }
+
+  .footer-right p:nth-of-type(2){
+    margin-left: 0px;
+  }
+
+  .footer-right a{
+    line-height: 2em;
+  }
+
+  .footer-middle{
+    left: 40%;
+  }
 
 }
