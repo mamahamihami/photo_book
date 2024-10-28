@@ -1,0 +1,440 @@
+body {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "游ゴシック体", "Yu Gothic", Arial, sans-serif;
+
+}
+
+.content {
+  width: 860px;
+}
+
+header {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-img {
+  position: relative;
+  width: 7%;
+  left: 30px;
+  top: 30px;
+  object-fit: cover;
+}
+
+.hamburger-menu {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: none;
+  background: transparent;
+  appearance: none;
+  padding: 0;
+  cursor: pointer;
+  top: 30px;
+  right: 30px;
+}
+
+.hamburger-menu-bar {
+  display: inline-block;
+  width: 44%;
+  height: 2px;
+  background: #242424;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: .5s;
+}
+
+.hamburger-menu-bar:first-child {
+  top: 16px;
+}
+
+.hamburger-menu-bar:nth-child(2) {
+  top: 24px;
+}
+
+.hamburger-menu-bar:last-child {
+  top: 32px;
+}
+
+
+.hamburger-menu--open .hamburger-menu-bar:first-child {
+  transform: translateX(-50%) translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu--open .hamburger-menu-bar:last-child {
+  transform: translateX(-50%) translateY(-8px) rotate(-45deg);
+}
+
+.hamburger-menu--open .hamburger-menu-bar:nth-child(2) {
+  opacity: 0;
+}
+
+
+.navigation {
+  display: none;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navigation_list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation_link {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+}
+
+.header--open {
+  background-color: red;
+  height: 100vh;
+}
+
+
+.hamburger-menu--open+.navigation {
+  display: block;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  margin: 50px auto 100px;
+  justify-content: space-around;
+}
+
+
+.main-left {
+  height: 200px;
+  flex-basis: 40%;
+  position: relative;
+  z-index: 10;
+  left: 130px;
+  bottom: -300px;
+}
+
+.main-left h2 {
+  font-size: 45px;
+  margin-bottom: 0;
+  margin-top: 0;
+  letter-spacing: 0.03em;
+}
+
+
+.main-button {
+  width: 430px;
+  height: 70px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+
+.main-right {
+  flex-basis: 100%;
+  text-align: right;
+  position: relative;
+  margin-right: 20px;
+  z-index: 2;
+}
+
+.main-right img {
+  width: calc(100% + 50px);
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  right: 5px;
+  opacity: 0;
+  animation: image-switch-animation 15s infinite;
+}
+
+@keyframes image-switch-animation {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.main-right img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.main-right img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.main-right img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+#reason {
+  margin-bottom: 100px;
+  width: 100%;
+}
+
+#reason h2 {
+  text-align: center;
+  font-size: 35px;
+}
+
+#reason h2::after {
+  content: "";
+  margin: 10px auto;
+  display: block;
+  width: 120px;
+  border-bottom: solid 5px black;
+}
+
+.reason-parent {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: red;
+}
+
+.reason-left {
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  display: flex;
+  background-color: white;
+  top: 80px;
+  left: 0;
+  justify-content: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform: translateX(-100%);
+  /* 左側に隠す */
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+  /* スムーズなアニメーション */
+}
+
+.reason-left img {
+  object-fit: scale-down;
+  width: 12%;
+  margin-right: 80px;
+}
+
+.reason-left-child h3 {
+  margin: 30px 0 30px 10px;
+  font-size: 30px;
+  color: red;
+}
+
+.reason-right {
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  display: flex;
+  background-color: white;
+  bottom: 80px;
+  right: 0;
+  transform: translateX(100%);
+  /* 右側に隠す */
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.reason-parent.show .reason-left,
+.reason-parent.show .reason-right {
+  transform: translateX(0);
+  /* 中央にスライド */
+  opacity: 1;
+  /* フェードイン */
+}
+
+#voice {
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+#voice h2 {
+  font-size: 35px;
+  text-align: center;
+
+}
+
+#voice h2::after {
+  content: "";
+  margin: 10px auto;
+  display: block;
+  width: 120px;
+  border-bottom: solid 5px black;
+}
+
+.voice-left {
+  display: flex;
+  text-align: left;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  /* 初期位置を少し下に設定 */
+  transition: opacity 1s ease, transform 1s ease;
+  /* 不透明度と変形のスムーズなアニメーション */
+}
+
+.voice-right {
+  display: flex;
+  text-align: right;
+  flex-direction: row-reverse;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  /* 初期位置を少し下に設定 */
+  transition: opacity 1s ease, transform 1s ease;
+  /* 不透明度と変形のスムーズなアニメーション */
+
+}
+
+.voice-left.show,
+.voice-right.show {
+  opacity: 1;
+  /* 表示 */
+  transform: translateY(0);
+  /* 元の位置に戻す */
+}
+
+/* 遅延を設定 */
+.voice-left.show:nth-of-type(1),
+.voice-right.show:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+
+.voice-left.show:nth-of-type(2),
+.voice-right.show:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.voice-left.show:nth-of-type(3),
+.voice-right.show:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+.voice-child-left {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.voice-child-right {
+  flex-basis: 60%;
+  text-align: left;
+}
+
+.voice-child-left img {
+  width: 50%;
+  background-color: gray;
+  border: 2px solid gray;
+  border-radius: 50%;
+}
+
+.voice-left h5 {
+  margin: 0;
+  text-wrap: wrap;
+}
+
+.voice-right h5 {
+  margin: 0;
+}
+
+.voice-child-right {
+  text-align: left;
+  background-color: gray;
+  border-radius: 10px;
+}
+
+#overview {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+  background-image: url(img/bg.gif);
+  background-repeat: repeat; /* 背景画像を繰り返す */
+  animation: flow 10s linear infinite; /* アニメーションを適用 */
+}
+
+/* 背景が右上から左下に流れるアニメーション */
+@keyframes flow {
+  0% {
+    background-position: 100% 0; /* 右上 */
+  }
+  100% {
+    background-position: 0 100%; /* 左下 */
+  }
+}
+
+#overview h2 {
+  font-size: 35px;
+  margin-top: 0;
+  text-align: center;
+  padding-top: 40px;
+
+}
+
+#overview h2::after {
+  content: "";
+  margin: 10px auto;
+  display: block;
+  width: 120px;
+  border-bottom: solid 5px black;
+}
+
+.overview-parent {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.overview-left {
+  flex-basis: 48%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.overview-child {
+  margin: 30px auto;
+  padding: 50px 0;
+  background-color: gray;
+}
+
+.overview-right {
+  flex-basis: 48%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.footer {
+  width: 100%;
+  margin: 0 auto;
+}
