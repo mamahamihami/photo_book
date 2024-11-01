@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/jquery.inview.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -28,7 +28,9 @@
             <li class="navigation_list-item"><a href="#" class="navigation_link">受講生の声</a></li>
             <li class="navigation_list-item"><a href="#" class="navigation_link">スクールの概要</a></li>
           </ul>
-          <input type="submit" value="無料体験に申し込む" src=".header">
+          <div class="nabigation-btn">
+            <input class="navigation-botton" type="submit" value="無料体験に申し込む" src=".header">
+          </div>
         </nav>
       </div>
     </header>
@@ -39,7 +41,7 @@
           <div class="main-left">
             <h2>話して学ぼう！</h2>
             <h2>BBB英会話スクール</h2>
-            <input class="main-button" type="submit" value="無料体験はこちら" src="#">
+            <button class="main-button"><a href="#">無料体験はこちら</a></button>
           </div>
           <div class="main-right">
             <img src="img/mainvisual1.jpg" alt="">
@@ -138,17 +140,17 @@
           </div>
         </section>
 
-        <section id="application content">
+        <section id="application" class="content">
           <h2>まずは無料で、BBBの英会話を試してみませんか？</h2>
           <p>今なら初月のレッスンを特別価格で受講できる割引クーポンをプレゼント！</p>
-          <input class="applicatio-button" type="submit" value="無料体験に申し込む" src="#">
+          <input class="application-button" type="submit" value="無料体験に申し込む" src="#">
         </section>
 
       </article>
     </main>
 
     <footer>
-      <div id="footer">
+      <div id="footer" class="content">
         <div class="footer">
           <p>コース一覧</p>
           <ul>
@@ -184,8 +186,8 @@
             <li>お問い合わせ<a href="#"></a></li>
           </ul>
         </div>
-        <p>&copy; BBB English School</p>
       </div>
+      <p class="footer-p">&copy; BBB English School</p>
     </footer>
   </div>
 </body>
